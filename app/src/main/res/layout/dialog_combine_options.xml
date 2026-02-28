@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/surface">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Page Title"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_marginBottom="4dp"/>
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="My App"
+        android:inputType="text"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_secondary"
+        android:text="My Combined App"
+        android:background="@color/surface_variant"
+        android:padding="10dp"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Embed Mode"
+        android:textColor="@color/text_secondary"
+        android:textSize="12sp"
+        android:layout_marginBottom="8dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="12dp">
+
+        <RadioButton
+            android:id="@+id/rbInline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚡ Inline — embed CSS + JS inside HTML (self-contained file)"
+            android:textColor="@color/text_primary"
+            android:checked="true"
+            android:padding="8dp"/>
+
+        <RadioButton
+            android:id="@+id/rbLinked"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔗 Linked — reference files via localhost:8080 (server must be running)"
+            android:textColor="@color/text_primary"
+            android:padding="8dp"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Minify output"
+            android:textColor="@color/text_primary"/>
+
+        <Switch
+            android:id="@+id/swMinify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumbTint="@color/primary"/>
+
+    </LinearLayout>
+
+</LinearLayout>

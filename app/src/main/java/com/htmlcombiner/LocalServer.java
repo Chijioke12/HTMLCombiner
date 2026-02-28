@@ -39,7 +39,7 @@ public class LocalServer extends NanoHTTPD {
         running = false;
     }
 
-    public boolean isAlive() {
+    public boolean isRunning() {
         return running;
     }
 

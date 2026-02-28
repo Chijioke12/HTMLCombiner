@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
     // ──────────────── Local Server ────────────────
 
     private void toggleServer() {
-        if (server != null && server.isAlive()) {
+        if (server != null && server.isRunning()) {
             server.stop();
             server = null;
             btnStartServer.setText("🖥 Start Local Server");
@@ -218,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void previewServer() {
-        if (server == null || !server.isAlive()) {
+        if (server == null || !server.isRunning()) {
             toast("Start the server first!");
             return;
         }
